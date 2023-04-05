@@ -1,0 +1,188 @@
+.modall {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+    z-index: 2;
+}
+
+.modall.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal_content {
+    transform: scale(0.5);
+    transition: 0.4s all;
+    .content {
+        width: 449px;
+        height: 514px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 30px;
+        background: url(../../../public/img/header/form_bg.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 27px;
+        .text {
+            width: 100%;
+            height: 100%;
+            h1 {
+                margin: 0;
+                font-family: 'Gilroy';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 29px;
+                color: #000000;
+                margin-bottom: 10px;
+                span {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+            hr {
+                color: #000;
+                width: auto;
+            }
+            p {
+                font-family: 'Gilroy';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 20px;
+                color: #000000;
+            }
+        }
+    }
+    .form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+        background: rgba(139, 206, 255, 0.21);
+        box-shadow: inset 29.2333px -29.2333px 29.2333px rgba(165, 165, 165, 0.04), inset -29.2333px 29.2333px 29.2333px rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(44.4347px);
+        /* Note: backdrop-filter has minimal browser support */
+        border-radius: 20px;
+        h2 {
+            margin: 0;
+            margin-bottom: 30px;
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 24px;
+            /* identical to box height */
+            letter-spacing: 0.025em;
+            color: #000000;
+        }
+        input {
+            margin: 3px 0;
+            padding: 2px;
+            padding-left: 10px;
+            background: #FFFFFF;
+            border-radius: 9px;
+            border: none;
+        }
+        input::placeholder {
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 14px;
+            letter-spacing: 0.025em;
+            color: #706A6A;
+        }
+        textarea {
+            margin-top: 3px;
+            padding: 5px;
+            border: none;
+            background: #FFFFFF;
+            border-radius: 9px;
+        }
+        textarea::placeholder {
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 14px;
+            letter-spacing: 0.025em;
+            color: #706A6A;
+        }
+        button {
+            height: 40px;
+            width: 40%;
+            margin: 0 auto;
+            margin-top: 10px;
+            background: linear-gradient(91.15deg, #12CFC4 -5.77%, #093AE9 112.27%);
+            box-shadow: 0px 3px 15px 1px rgba(155, 130, 0, 0.25);
+            border-radius: 5px;
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFFFFF;
+            border: none;
+            transition: all 0.5s;
+        }
+        button:hover {
+            transition: all 0.5s;
+            width: 50%;
+        }
+    }
+}
+
+.modal_content.active {
+    transform: scale(1);
+}
+
+@media (max-width: 450px) {
+    .modall {}
+    .modal_content {
+        .content {
+            width: 340px;
+            padding: 10px 15px;
+            border-radius: 20px;
+            .text {
+                h1 {
+                    font-size: 20px;
+                    span {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .form {
+                h2 {
+                    font-size: 16px;
+                }
+                input::placeholder {
+                    font-size: 14px;
+                }
+                textarea::placeholder {
+                    font-size: 14px;
+                }
+                button {
+                    width: 70%;
+                    height: 50px;
+                }
+            }
+        }
+    }
+}

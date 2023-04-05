@@ -1,0 +1,103 @@
+.photos {
+    height: 100%;
+    padding-bottom: 100px;
+    background: url(../../public/img/gallery/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .headline {
+            margin-top: 60px;
+            h1 {
+                text-align: center;
+                font-family: 'Pelinka';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 41px;
+                letter-spacing: 0.025em;
+                color: #FFFFFF;
+            }
+        }
+        .row {
+            display: -ms-flexbox;
+            /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap;
+            justify-content: center;
+            /* IE10 */
+            flex-wrap: wrap;
+            padding: 0 4px;
+            img {
+                text-align: center;
+                width: 330px;
+                height: 470px;
+                margin: 30px;
+                border: 5px solid transparent;
+                border-image: linear-gradient(30deg, #0B23F6, #F905E0, #FDFAFE, #0720FC);
+                border-image-slice: 1;
+                box-shadow: 0px 0px 22px 15px rgba(114, 114, 114, 0.25);
+            }
+            .column {
+                text-align: center;
+                -ms-flex: 25%;
+                /* IE10 */
+                flex: 20%;
+                max-width: 19%;
+                padding: 0 4px;
+            }
+        }
+    }
+    hr {
+        width: 70%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1770px) {
+    .photos {
+        .content {
+            .row {
+                img {
+                    width: 70%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .photos {
+        .content {
+            .row {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: auto;
+                }
+                .column {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .photos {
+        .content {
+            .row {
+                img {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

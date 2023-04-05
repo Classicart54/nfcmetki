@@ -1,0 +1,209 @@
+.footer {
+    background-color: #0E0D0D;
+    display: flex;
+    justify-content: center;
+    grid-gap: 100px;
+    color: #fff;
+    padding-bottom: 25px;
+    .contacts {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        .logo {}
+        h2 {
+            margin: 0;
+            margin: 20px;
+            margin-left: 0;
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: 0.15em;
+            color: #FFFFFF;
+        }
+        p {
+            margin: 5px 0px;
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: #FFFFFF;
+        }
+        a {
+            text-decoration: none;
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: #FFFFFF;
+        }
+    }
+    .navigation {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        grid-gap: 40px;
+        h3 {
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            letter-spacing: 0.15em;
+            color: #FFFFFF;
+        }
+        p {
+            cursor: pointer;
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.15em;
+            color: #9D9D9D;
+        }
+    }
+    .links {
+        display: flex;
+        align-items: end;
+        grid-gap: 40px;
+        img {
+            padding: 10px;
+        }
+    }
+}
+
+@media (max-width: 1500px) {
+    .footer {
+        grid-gap: 50px;
+        .contacts {
+            .logo {
+                width: 100px;
+            }
+            h2 {
+                font-size: 16px;
+            }
+            p {
+                font-size: 14px;
+            }
+            a {
+                font-size: 14px;
+            }
+        }
+        .navigation {
+            grid-gap: 20px;
+            .n {
+                h3 {
+                    font-size: 16px;
+                }
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1190px) {
+    .footer {
+        grid-gap: 25px;
+        display: flex;
+        align-items: end;
+        padding-top: 20px;
+        .contacts {
+            .logo {
+                width: 100px;
+            }
+            h2 {
+                margin: 5px;
+                margin-left: 0;
+                font-size: 16px;
+            }
+            p {
+                font-size: 14px;
+            }
+            a {
+                font-size: 14px;
+            }
+        }
+        .navigation {
+            grid-gap: 20px;
+            .n {
+                h3 {
+                    font-size: 16px;
+                }
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+        .links {
+            grid-gap: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .logo {
+                a {
+                    img {
+                        width: 150px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .contacts {
+            text-align: center;
+            margin-bottom: 20px;
+            .logo {
+                width: 300px;
+            }
+            h2 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 24px;
+            }
+            a {
+                font-size: 24px;
+            }
+        }
+        .navigation {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            .n {
+                h3 {
+                    font-size: 24px;
+                    margin-bottom: 20px;
+                }
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+        .links {
+            .logo {
+                a {
+                    img {
+                        width: 300px;
+                    }
+                }
+            }
+        }
+    }
+}

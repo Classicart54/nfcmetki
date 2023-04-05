@@ -1,0 +1,54 @@
+.navigation {
+    ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+        grid-gap: 30px;
+        li {
+            cursor: pointer;
+            padding: 12px 20px;
+            border: 1px solid #797979;
+            border-radius: 14px;
+            transition: all 0.5s;
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            /* identical to box height */
+            letter-spacing: 0.025em;
+        }
+    }
+}
+
+.navlink {
+    text-decoration: none;
+    color: rgb(106, 106, 106);
+}
+
+.navlink:hover {
+    color: #fff;
+}
+
+.active {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.active:hover {
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .navigation {
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            text-align: center;
+            li {
+                text-align: center;
+            }
+        }
+    }
+}

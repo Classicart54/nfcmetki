@@ -1,0 +1,203 @@
+@mixin content_glassy {
+    h2 {
+        margin-bottom: 20px;
+        text-align: left;
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 39px;
+        color: #FFFFFF;
+    }
+    .glassy {
+        padding: 40px 30px;
+        width: 503px;
+        height: 495px;
+        margin-bottom: 30px;
+        background: rgba(217, 217, 217, 0.075);
+        box-shadow: inset 33.2667px -33.2667px 33.2667px rgba(165, 165, 165, 0.075), inset -33.2667px 33.2667px 33.2667px rgba(255, 255, 255, 0.075);
+        backdrop-filter: blur(56.5533px);
+        /* Note: backdrop-filter has minimal browser support */
+        border-radius: 30px;
+        .item {
+            display: flex;
+            align-items: center;
+            grid-gap: 20px;
+            .text {
+                margin: 0;
+                text-align: left;
+                .title {
+                    text-align: left;
+                    margin: 0;
+                    margin-bottom: 4px;
+                    font-family: 'Gilroy';
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 20px;
+                    line-height: 136.5%;
+                    letter-spacing: 0.05em;
+                    color: #FFFFFF;
+                }
+                .subtitle {
+                    font-family: 'Gilroy';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 136.5%;
+                    /* or 19px */
+                    letter-spacing: 0.115em;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+    button {
+        border: none;
+        text-decoration: none;
+        background: #EAE3FB;
+        border-radius: 12px;
+        padding: 10px 30px;
+        color: #000;
+        transition: all 0.5s;
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18px;
+        color: #000000;
+    }
+}
+
+.benefits {
+    margin-top: 100px;
+    height: 800px;
+    background: url(../../public/img/benefits/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    .text {
+        margin-bottom: 15px;
+        h1 {
+            text-align: center;
+            font-family: 'Pelinka';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 41px;
+            letter-spacing: 0.025em;
+            color: #FFFFFF;
+        }
+        h2 {
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            text-align: center;
+            letter-spacing: 0.025em;
+            color: #FFFFFF;
+        }
+    }
+    hr {
+        border: 1px solid #fff;
+        margin: 0 auto;
+        color: #fff;
+        width: 75%;
+        //opacity: 1;
+    }
+    .elements {
+        display: flex;
+        justify-content: center;
+        grid-gap: 120px;
+        margin-top: 50px;
+        .business {
+            @include content_glassy;
+        }
+        .clients {
+            @include content_glassy;
+            .tocatalog {
+                text-decoration: none;
+                padding: 10px 50px;
+                background: #EAE3FB;
+                border-radius: 12px;
+                font-family: 'Gilroy';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 15px;
+                line-height: 18px;
+                color: #000000;
+            }
+        }
+    }
+}
+
+@media (max-width: 1140px) {
+    .benefits {
+        height: 100%;
+        background: none;
+        .elements {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .benefits {
+        .text {
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 14px;
+            }
+        }
+        .elements {
+            grid-gap: 100px;
+            .business {
+                padding: 20px;
+                h2 {
+                    font-size: 24px;
+                }
+                .glassy {
+                    width: 100%;
+                    height: 100%;
+                    padding: 15px 10px;
+                    .item {
+                        .text {
+                            .title {
+                                font-size: 16px;
+                            }
+                            .subtitle {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+            .clients {
+                padding: 20px;
+                h2 {
+                    font-size: 24px;
+                }
+                .glassy {
+                    width: 100%;
+                    height: 100%;
+                    padding: 15px 10px;
+                    .item {
+                        .text {
+                            .title {
+                                font-size: 16px;
+                            }
+                            .subtitle {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

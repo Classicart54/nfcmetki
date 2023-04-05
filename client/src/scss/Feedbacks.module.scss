@@ -1,0 +1,102 @@
+.feedbacks {
+    height: auto;
+    padding: 100px;
+    padding-bottom: 200px;
+    padding-top: 50px;
+    background: url(../../public/img/feedbacks/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .content {
+        .headline {
+            h1 {
+                text-align: center;
+                margin: 0;
+                margin-bottom: 10px;
+                font-family: 'Pelinka';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 41px;
+                letter-spacing: 0.025em;
+                color: #FFFFFF;
+            }
+            p {
+                margin: 0;
+                margin-bottom: 50px;
+                font-family: 'Gilroy';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 70.5%;
+                text-align: center;
+                letter-spacing: 0.025em;
+                color: #FFFFFF;
+            }
+        }
+        .element {
+            max-width: 1240px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+    }
+}
+
+@media (max-width: 1260px) {
+    .feedbacks {
+        .content {
+            .element {
+                max-width: 1140px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .feedbacks {
+        .content {
+            .element {
+                max-width: 992px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .feedbacks {
+        .content {
+            .element {
+                max-width: 768px;
+            }
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .feedbacks {
+        .content {
+            .element {
+                max-width: 468px;
+            }
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .feedbacks {
+        .content {
+            .headline {
+                h1 {
+                    font-size: 24px;
+                }
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

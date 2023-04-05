@@ -1,0 +1,86 @@
+.partners {
+    background: url(../../public/img/partners/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .content {
+        .headline {
+            h1 {
+                margin: 0;
+                padding-top: 40px;
+                text-align: center;
+                font-family: 'Pelinka';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 41px;
+                letter-spacing: 0.025em;
+                color: #FFFFFF;
+            }
+            p {
+                margin-top: 20px;
+                text-align: center;
+                font-family: 'Gilroy';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 70.5%;
+                text-align: center;
+                letter-spacing: 0.025em;
+                color: #FFFFFF;
+            }
+        }
+        .logotypes {
+            margin-top: 70px;
+            padding-bottom: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1330px) {
+    .partners {
+        .content {
+            .logotypes {
+                .items {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: repeat(2, 1fr);
+                    justify-items: center;
+                    a {
+                        padding: 10px;
+                        img {
+                            width: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 630px) {
+    .partners {
+        .content {
+            .logotypes {
+                .items {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-template-rows: repeat(3, 1fr);
+                    justify-items: center;
+                    a {
+                        padding: 10px;
+                        img {
+                            width: 150px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

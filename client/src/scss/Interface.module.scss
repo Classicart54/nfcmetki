@@ -1,0 +1,92 @@
+.interface {
+    height: 1000px;
+    background: url(../../public/img/interface/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 150px;
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .text {
+            margin-top: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            h1 {
+                text-align: center;
+                font-family: 'Pelinka';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 41px;
+                letter-spacing: 0.025em;
+                color: #FFFFFF;
+            }
+            p {
+                font-family: 'Gilroy';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 136.5%;
+                text-align: center;
+                letter-spacing: 0.025em;
+                color: #FFFFFF;
+                span {
+                    color: #0085FF;
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    .phone {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1500px) {
+    .interface {
+        .phone {
+            max-width: 1000px;
+            padding: 25px;
+        }
+    }
+}
+
+@media (max-width: 970px) {
+    .interface {
+        .phone {
+            max-width: 800px;
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    .interface {
+        .content {
+            .text {
+                h1 {
+                    font-size: 32px;
+                }
+                p {
+                    font-size: 14px;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+        .phone {
+            max-width: 400px;
+            padding: 0;
+        }
+    }
+}
